@@ -105,26 +105,26 @@ graph TD
     B --> G{x >= b+c}
     B --> H{x >= a+c}
     B --> I{x >= a+b+c}
-    C --> Нет a --> CN{Вывод: a No}
-    C --> Да a --> CY{Вывод: a Yes}
+    C -- Нет --> CN{Вывод: a No}
+    C -- Да --> CY{Вывод: a Yes}
     CY --> k1 --> K
-    D --> Нет b --> DN{Вывод: b No}
-    D --> Да b --> DY{Вывод: b Yes}
+    D -- Нет --> DN{Вывод: b No}
+    D -- Да --> DY{Вывод: b Yes}
     DY --> k1 --> K
-    E --> Нет c --> EN{Вывод: с No}
-    E --> Да c --> EY{Вывод: с Yes}
+    E -- Нет --> EN{Вывод: с No}
+    E -- Да --> EY{Вывод: с Yes}
     EY --> k1 --> K
-    F --> Нет a+b --> FN{Вывод: a+b No}
-    F --> Да a+b --> FY{Вывод: a+b Yes}
+    F -- Нет --> FN{Вывод: a+b No}
+    F -- Да --> FY{Вывод: a+b Yes}
     FY --> k2 --> K
-    G --> Нет b+c --> GN{Вывод: b+c No}
-    G --> Да b+c --> GY{Вывод: b+c Yes}
+    G -- Нет --> GN{Вывод: b+c No}
+    G -- Да --> GY{Вывод: b+c Yes}
     GY --> k2 --> K
-    H --> Нет a+c --> HN{Вывод: a+с No}
-    H --> Да a+c --> HY{Вывод: a+с Yes}
+    H -- Нет --> HN{Вывод: a+с No}
+    H -- Да --> HY{Вывод: a+с Yes}
     HY --> k2 --> K
-    I --> Нет a+b+c --> IN{Вывод: a+b+с No}
-    I --> Да a+b+c --> IY{Вывод: a+b+с Yes}
+    I -- Нет --> IN{Вывод: a+b+с No}
+    I -- Да --> IY{Вывод: a+b+с Yes}
     IY --> k3 --> K
     K --> KK{Вывод: a+b+с Yes}
     KK--> Z([Конец])
