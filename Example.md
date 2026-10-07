@@ -150,27 +150,58 @@ public class Main {
     public static PrintStream out = System.out;
 
     public static void main(String[] args) {
-        // Считывание двух вещественных чисел x и y из консоли
-        double x = in.nextDouble();
-        double y = in.nextDouble();
+        // Считывание четырех вещественных чисел x, a, b, c из консоли
+         double x = in.nextDouble();
+         double a = in.nextDouble();
+         double b = in.nextDouble();
+         double c = in.nextDouble();
+         double k = 0;
 
-        // Определение максимального числа
-        if (x >= y) {
-            // Если x положительное, выводим x, иначе выводим -x,
-            // чтобы на выходе было его абсолютное значение
-            if (x >= 0) {
-                out.println(x);
-            } else {
-                out.println(-x);
+        // Определение возможности лифта
+        if (x >= a) {
+            out.println(a,"Yes");
+            k = 1
+         } else {
+                out.println(a,"No");
             }
-        } else {
-            // Если x положительное, выводим y, иначе выводим -y,
-            // чтобы на выходе было его абсолютное значение
-            if (y >= 0) {
-                out.println(y);
-            } else {
-                out.println(-y);
+        if (x >= b) {
+            out.println(b,"Yes");
+            k = 1
+         } else {
+                out.println(b,"No");
             }
+        if (x >= c) {
+            out.println(c,"Yes");
+            k = 1
+         } else {
+                out.println(c,"No");
+            }
+        if (x >= a+b) {
+            out.println(a,"+",b,"Yes");
+            k = 2
+         } else {
+                out.println(a,"+",b,"No");
+            }
+        if (x >= b+c) {
+            out.println(b,"+",c,"Yes");
+            k = 2
+         } else {
+                out.println(b,"+",c,"No");
+            }
+        if (x >= a+c) {
+            out.println(a,"+",c,"Yes");
+            k = 2
+         } else {
+                out.println(a,"+",c,"No");
+            }
+        if (x >= a+b+c) {
+            out.println(a,"+",b,"+",c,"Yes");
+            k = 3
+         } else {
+                out.println(a,"+",b,"+",c,"No");
+            }
+        
+        out.println(k);
         }
     }
 }
