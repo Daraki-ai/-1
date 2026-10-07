@@ -144,65 +144,74 @@ import java.io.PrintStream;
 import java.util.Scanner;
 
 public class Main {
-    // Объявляем объект класса Scanner для ввода данных
     public static Scanner in = new Scanner(System.in);
-    // Объявляем объект класса PrintStream для вывода данных
     public static PrintStream out = System.out;
 
     public static void main(String[] args) {
-        // Считывание четырех вещественных чисел x, a, b, c из консоли
-         double x = in.nextDouble();
-         double a = in.nextDouble();
-         double b = in.nextDouble();
-         double c = in.nextDouble();
-         double k = 0;
 
-        // Определение возможности лифта
+        double x = in.nextDouble();
+        double a = in.nextDouble();
+        double b = in.nextDouble();
+        double c = in.nextDouble();
+        int k = 0;
+
+        // Проверяем груз A
         if (x >= a) {
-            out.println(a,"Yes");
-            k = 1
-         } else {
-                out.println(a,"No");
-            }
-        if (x >= b) {
-            out.println(b,"Yes");
-            k = 1
-         } else {
-                out.println(b,"No");
-            }
-        if (x >= c) {
-            out.println(c,"Yes");
-            k = 1
-         } else {
-                out.println(c,"No");
-            }
-        if (x >= a+b) {
-            out.println(a,"+",b,"Yes");
-            k = 2
-         } else {
-                out.println(a,"+",b,"No");
-            }
-        if (x >= b+c) {
-            out.println(b,"+",c,"Yes");
-            k = 2
-         } else {
-                out.println(b,"+",c,"No");
-            }
-        if (x >= a+c) {
-            out.println(a,"+",c,"Yes");
-            k = 2
-         } else {
-                out.println(a,"+",c,"No");
-            }
-        if (x >= a+b+c) {
-            out.println(a,"+",b,"+",c,"Yes");
-            k = 3
-         } else {
-                out.println(a,"+",b,"+",c,"No");
-            }
-        
-        out.println(k);
+            out.println(a + " Yes");
+            k = 1;
+        } else {
+            out.println(a + " No");
         }
+
+        // Проверяем груз B
+        if (x >= b) {
+            out.println(b + " Yes");
+            k = 1;
+        } else {
+            out.println(b + " No");
+        }
+
+        // Проверяем груз C
+        if (x >= c) {
+            out.println(c + " Yes");
+            k = 1;
+        } else {
+            out.println(c + " No");
+        }
+
+        // Проверяем A + B
+        if (x >= a + b) {
+            out.println(a + " + " + b + " Yes");
+            k = 2;
+        } else {
+            out.println(a + " + " + b + " No");
+        }
+
+        // Проверяем B + C
+        if (x >= b + c) {
+            out.println(b + " + " + c + " Yes");
+            k = 2;
+        } else {
+            out.println(b + " + " + c + " No");
+        }
+
+        // Проверяем A + C
+        if (x >= a + c) {
+            out.println(a + " + " + c + " Yes");
+            k = 2;
+        } else {
+            out.println(a + " + " + c + " No");
+        }
+
+        // Проверяем A + B + C
+        if (x >= a + b + c) {
+            out.println(a + " + " + b + " + " + c + " Yes");
+            k = 3;
+        } else {
+            out.println(a + " + " + b + " + " + c + " No");
+        }
+
+        out.println("Максимальное количество грузов: " + k);
     }
 }
 ```
